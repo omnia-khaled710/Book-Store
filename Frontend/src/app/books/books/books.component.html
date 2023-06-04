@@ -1,0 +1,21 @@
+
+<div class="container">
+    <h1 class="mt-5" style="text-align: center;"> BOOKS </h1>
+    <br><br>
+    <div>
+        <div class="row" >
+            <div *ngFor="let book of allBooks | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage } " class="col-md-3 my-3">
+                <div class="card" (click)="getBookDetails(book._id)">
+                    <div class="card-body">
+                        <img style="height: 400px;" class="w-100" src="http://localhost:5000/{{ book.photo.split('assets')[1] }}" alt="image">
+                       <h6 class="my-3">{{book.title}}</h6>
+                     <p>{{book.desc}}</p>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="text-center paginationNav mt-2">
+            <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+        </div>
+    </div>
+</div>
