@@ -1,0 +1,40 @@
+
+.card
+{  
+    transition: all 0.5s;
+    border-radius: 6px;
+    overflow: hidden;
+    height:380px;
+}
+.book-title{
+    padding-bottom: 11px;
+    width: fit-content;
+    margin: auto;
+    font-size: 20px;
+    display: block;
+    font-weight: 600;
+}
+.book-cover{
+    overflow: hidden;
+    height: 278px;
+    display: flex;
+}
+.book-cover img{
+    height: 100%;
+    margin: auto;
+    width: fit-content;
+    object-position: top;
+    object-fit: contain;
+    box-shadow: 4px 9px 6px #00000082;
+    transition: all 0.5s;
+}
+.card-body{
+    background-color: #008cab25 ;
+    backdrop-filter: blur(10px);
+}
+.card:hover .book-cover img{
+    transform: scale(1.3);
+}
+p{
+    text-transform: capitalize;
+}
